@@ -10,6 +10,10 @@ export const FeedDescriptor = styled.header`
     background-color: ${props => props.theme.navbarBackground};
     padding: 16px;
 
+    @media(min-width: 1200px) {
+        display: none;
+    }
+
     footer {
         margin-top: 16px;
         display: flex;
@@ -53,3 +57,26 @@ export const FeedDescriptor = styled.header`
         cursor: pointer;
     }
 `
+
+export const FeedForm = styled.div`
+    display: none;
+    width: 100%;
+
+    @media(min-width: 1200px) {
+        background-color: ${props => props.theme.navbarBackground};
+        display: block;
+        padding: 16px;
+
+        &  textarea {
+            width: 100%;
+            min-height: 80px;
+        }
+
+        & footer {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 8px;
+        }
+    }
+`;

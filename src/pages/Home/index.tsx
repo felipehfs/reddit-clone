@@ -1,6 +1,7 @@
 import React from 'react'
 import Feed from '../../components/contextual/Feed'
 import Header from '../../components/contextual/Header'
+import { Container, FeedContainer } from './Home.styles'
 
 interface Props {
     
@@ -8,10 +9,12 @@ interface Props {
 
 const Home = (props: Props) => {
     return (
-        <div style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <Container>
             <Header />
-            <Feed />
-        </div>
+            <FeedContainer>
+                <Feed />
+            </FeedContainer>
+        </Container>
     )
 }
 
