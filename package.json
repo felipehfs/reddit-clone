@@ -10,10 +10,10 @@
     "@types/node": "^12.20.15",
     "@types/react": "^17.0.9",
     "@types/react-dom": "^17.0.6",
-    "axios": "^0.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
+    "react-query": "^3.16.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "styled-components": "^5.3.0",
@@ -24,7 +24,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "serve": "npx json-server --watch ./src/data/server.json --port 5000"
   },
   "eslintConfig": {
     "extends": [
@@ -45,7 +46,10 @@
     ]
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/react-router-dom": "^5.1.7",
-    "@types/styled-components": "^5.1.9"
+    "@types/styled-components": "^5.1.9",
+    "axios": "^0.21.1",
+    "json-server": "^0.16.3"
   }
 }

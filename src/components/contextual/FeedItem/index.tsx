@@ -18,7 +18,7 @@ export default function FeedItem(props: FeedItemProps) {
         <FeedWrapper>
             <FeedHeader>
                 <FeedHeaderLeft>
-                    <Avatar src={props.data.avatarURL} alt="Avatar" size={24}/>
+                    <Avatar src={props.data.avatarUrl} alt="Avatar" size={24}/>
                     <span>
                         {props.data.channel}
                     </span>

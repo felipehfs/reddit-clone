@@ -1,0 +1,85 @@
+{
+    "channels": [
+    {
+        "id": 1,
+        "rating": 5,
+        "avatarUrl": "https://robohash.org/utcupiditateodit.png?size=50x50&set=set1",
+        "time": "29/05/2021",
+        "channel": "even-keeled",
+        "title": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
+        "totalComments": 18
+      }, {
+        "id": 2,
+        "rating": 2,
+        "avatarUrl": "https://robohash.org/inventorerationesit.png?size=50x50&set=set1",
+        "time": "09/06/2021",
+        "channel": "Decentralized",
+        "title": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
+        "totalComments": 71
+      }, {
+        "id": 3,
+        "rating": 4,
+        "avatarUrl": "https://robohash.org/errorutodio.png?size=50x50&set=set1",
+        "time": "16/12/2020",
+        "channel": "knowledge base",
+        "title": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
+        "totalComments": 51
+      }, {
+        "id": 4,
+        "rating": 1,
+        "avatarUrl": "https://robohash.org/ipsamdoloribusid.png?size=50x50&set=set1",
+        "time": "17/12/2020",
+        "channel": "Expanded",
+        "title": "In est risus, auctor sed, tristique in, tempus sit amet, sem. Fusce consequat.",
+        "totalComments": 67
+      }, {
+        "id": 5,
+        "rating": 3,
+        "avatarUrl": "https://robohash.org/occaecatieosratione.png?size=50x50&set=set1",
+        "time": "21/06/2020",
+        "channel": "policy",
+        "title": "Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+        "totalComments": 54
+      }, {
+        "id": 6,
+        "rating": 4,
+        "avatarUrl": "https://robohash.org/istequiut.png?size=50x50&set=set1",
+        "time": "29/06/2020",
+        "channel": "User-centric",
+        "title": "Sed ante.",
+        "totalComments": 79
+      }, {
+        "id": 7,
+        "rating": 3,
+        "avatarUrl": "https://robohash.org/aliquidconsequaturvelit.png?size=50x50&set=set1",
+        "time": "23/10/2020",
+        "channel": "encryption",
+        "title": "Fusce consequat. Nulla nisl.",
+        "totalComments": 9
+      }, {
+        "id": 8,
+        "rating": 1,
+        "avatarUrl": "https://robohash.org/praesentiumsedaliquam.png?size=50x50&set=set1",
+        "time": "18/08/2020",
+        "channel": "protocol",
+        "title": "Aenean lectus. Pellentesque eget nunc.",
+        "totalComments": 38
+      }, {
+        "id": 9,
+        "rating": 3,
+        "avatarUrl": "https://robohash.org/exercitationemvitaeet.png?size=50x50&set=set1",
+        "time": "06/06/2021",
+        "channel": "success",
+        "title": "Donec dapibus.",
+        "totalComments": 32
+      }, {
+        "id": 10,
+        "rating": 1,
+        "avatarUrl": "https://robohash.org/laudantiumreprehenderitdolorem.png?size=50x50&set=set1",
+        "time": "21/06/2020",
+        "channel": "user-facing",
+        "title": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl.",
+        "totalComments": 3
+    }
+    ]      
+}

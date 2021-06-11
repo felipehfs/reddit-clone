@@ -1,7 +1,7 @@
 export interface Post {
     id: string;
     channel: string;
-    avatarURL: string;
+    avatarUrl: string;
     title: string;
     time: string;
     totalComments: number;
