@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": 1,
-      "rating": 5,
+      "rating": 14,
       "avatarUrl": "https://robohash.org/utcupiditateodit.png?size=50x50&set=set1",
       "time": "29/05/2021",
       "channel": "even-keeled",
@@ -29,7 +29,7 @@
     },
     {
       "id": 4,
-      "rating": 1,
+      "rating": 3,
       "avatarUrl": "https://robohash.org/ipsamdoloribusid.png?size=50x50&set=set1",
       "time": "17/12/2020",
       "channel": "Expanded",
@@ -202,7 +202,7 @@
       "id": "604420",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "even-keeled",
-      "rating": 0,
+      "rating": 5,
       "time": "6/12/2021",
       "title": "",
       "totalComments": 0
@@ -211,7 +211,7 @@
       "id": "393173",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "even-keeled",
-      "rating": 0,
+      "rating": 2,
       "time": "6/12/2021",
       "title": "Felipe Henrique Ferreira Sousa....",
       "totalComments": 0

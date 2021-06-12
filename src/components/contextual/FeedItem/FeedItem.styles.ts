@@ -59,7 +59,7 @@ export const RatingButton = styled.button`
     border: none;
     background-color: transparent;
     cursor: pointer;
-
+    
     &:active {
         opacity: .5;
     }

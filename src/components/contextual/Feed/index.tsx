@@ -34,6 +34,7 @@ function Feed() {
 
     const {data: posts} = useQuery('channels', () => api.get('/posts')
         .then((resp => resp.data)))
+        
     const mutation = useMutation((post: Post) => api.post('/posts', post), {
         onSuccess: () => {
             queryClient.invalidateQueries('channels');

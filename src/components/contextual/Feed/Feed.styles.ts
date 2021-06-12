@@ -69,7 +69,7 @@ export const FeedForm = styled.div`
 
         &  textarea {
             width: 100%;
-            min-height: 80px;
+            min-height: 100px;
         }
 
         & footer {

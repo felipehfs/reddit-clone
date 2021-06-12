@@ -7,6 +7,8 @@ import {
 } from 'react-icons/fa'
 import { FeedWrapper, FeedHeader, FeedHeaderLeft, FeedContent, FeedFooter, RatingContainer, RatingButton } from './FeedItem.styles'
 import { Post } from '../../../models/Post'
+import { useMutation, useQueryClient } from 'react-query'
+import api from '../../../services/api'
 
 interface FeedItemProps {
    data: Post;
@@ -14,6 +16,28 @@ interface FeedItemProps {
 
 
 export default function FeedItem(props: FeedItemProps) {
+    const queryClient = useQueryClient();
+
+    const mutation = useMutation((post: Post) => api.put(`/posts/${post.id}`, post), {
+        onSuccess: () => {
+            queryClient.invalidateQueries("channels")
+        }
+    });
+
+    function handleUpVote() {
+        mutation.mutate({
+            ...props.data,
+            rating: props.data.rating + 1
+        });
+    }
+
+    function handleDownVote() {
+        mutation.mutate({
+            ...props.data,
+            rating: props.data.rating - 1,
+        });
+    }
+
     return (
         <FeedWrapper>
             <FeedHeader>
@@ -32,11 +56,11 @@ export default function FeedItem(props: FeedItemProps) {
             </FeedContent>
             <FeedFooter>
                 <RatingContainer>
-                    <RatingButton>
+                    <RatingButton disabled={mutation.isLoading} onClick={handleUpVote}>
                         <FaArrowUp size={12} />
                     </RatingButton>
                         <span className="points">{props.data.rating}</span>
-                    <RatingButton>
+                    <RatingButton disabled={mutation.isLoading} onClick={handleDownVote}>
                         <FaArrowDown size={12} />
                     </RatingButton>
                 </RatingContainer>
