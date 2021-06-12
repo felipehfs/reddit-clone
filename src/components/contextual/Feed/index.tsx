@@ -11,7 +11,7 @@ import {
 import React, { useState } from 'react';
 import FeedItem from '../FeedItem';
 import { Post } from '../../../models/Post';
-import { useQuery } from 'react-query';
+import { useMutation, useQuery, useQueryClient } from 'react-query';
 import api from '../../../services/api';
 import Button from '../../shared/Button';
 
@@ -21,16 +21,39 @@ function Feed() {
     const [sortedBy, setSortedBy] = useState<PostSortingOptions>('Hot')
     const [post, setPost] = useState('')
     const [showSortedOptions, setShowSortedOptions] = useState(false)
+
+    const queryClient = useQueryClient()
     
     const handleClickOptions = (newValue: PostSortingOptions) => {
         setSortedBy(newValue);
         setShowSortedOptions(false);
     }
 
-    const {data: posts} = useQuery('channels', () => api.get('/posts').then((resp => resp.data)))
-
+    const {data: posts} = useQuery('channels', () => api.get('/posts?_sort=time&order=asc')
+        .then((resp => resp.data)))
+    const mutation = useMutation((post: Post) => api.post('/posts', post), {
+        onSuccess: () => {
+            queryClient.invalidateQueries('channels');
+            setPost('');
+        }
+    });
+    
     const handleOnCreatePost = (event: React.MouseEvent<HTMLFormElement>) => {
-        event.preventDefault()
+        event.preventDefault();
+        if (!post.trim()) return;
+
+        const id = Math.floor(Math.random() * 9999999).toString();
+
+        mutation.mutate({
+            id,
+            avatarUrl: 'https://ui-avatars.com/api/?name=felipe+henrique',
+            channel: 'even-keeled',
+            rating: 0,
+            time: new Date().toLocaleDateString(),
+            title: post,
+            totalComments: 0,
+        });
+
     }
 
     return (
@@ -42,7 +65,7 @@ function Feed() {
                         value={post}
                     />
                     <footer>
-                        <Button colorScheme="secondary">Enviar</Button>
+                        <Button colorScheme="secondary" disabled={mutation.isLoading}>Enviar</Button>
                     </footer>
                 </form>
             </FeedForm>

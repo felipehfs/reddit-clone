@@ -6,5 +6,6 @@ declare module 'styled-components' {
         navbarBackground: string;
         background: string;
         secondary: string;
+        fontColor: string;
     }
 }

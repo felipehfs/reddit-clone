@@ -35,6 +35,7 @@ export const FeedContent = styled.main`
 
     p {
       font-size: 16px;
+        color: ${props => props.theme.fontColor};
     }
 `;
 

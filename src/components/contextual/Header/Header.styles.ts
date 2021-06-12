@@ -32,24 +32,6 @@ export const Wrapper = styled.header`
 
 `;
 
-export const Profile = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    @media(max-width: 1200px) {
-        display: none;
-    }
-
-     & section > p {
-        font-size: 14px;
-    }
-
-    & section > small {
-        opacity: .6;
-        font-size: 12px;
-    }
-`
 
 export const LogoImage = styled.img`
     height: 32px;
