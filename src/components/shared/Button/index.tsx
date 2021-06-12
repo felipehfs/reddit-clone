@@ -1,7 +1,9 @@
 import styled, { css } from "styled-components";
 
+type Variant = 'secondary' | 'outlined-secondary';
+
 interface ButtonProps {
-    colorScheme: 'secondary';
+    colorScheme: Variant;
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -11,14 +13,22 @@ export const Button = styled.button<ButtonProps>`
     font-size: 16px;
     font-weight: 400;
     border-radius: 4px;
+    color: #fff;
     
     ${
-        props => props.theme[props.colorScheme] && css`
+        props => props.colorScheme === 'secondary' && css`
             background-color: ${props.theme[props.colorScheme]};    
         `
     }
+
+    ${
+        props => props.colorScheme === 'outlined-secondary' && css`
+            background-color: transparent;
+            border: 1px solid ${props => props.theme.secondary};
+            color: ${props => props.theme.secondary};
+        `
+    }
     
-    color: #fff;
     cursor: pointer;
 
     &:active {

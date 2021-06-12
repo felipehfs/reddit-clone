@@ -80,3 +80,10 @@ export const FeedForm = styled.div`
         }
     }
 `;
+
+export const SeeMoreFooter = styled.footer`
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`

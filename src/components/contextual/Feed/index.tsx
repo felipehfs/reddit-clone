@@ -1,7 +1,8 @@
 import {
     Wrapper,
     FeedDescriptor,
-    FeedForm
+    FeedForm,
+    SeeMoreFooter
 } from './Feed.styles'
 import {
     FaFire,
@@ -22,6 +23,7 @@ type PostSortingOptions = 'Hot' | 'Latest';
 function Feed() {
     const [sortedBy, setSortedBy] = useState<PostSortingOptions>('Hot')
     const [post, setPost] = useState('')
+    const [page, setPage] = useState(0)
     const [session] = useAtom(SessionAtom)
     const [showSortedOptions, setShowSortedOptions] = useState(false)
 
@@ -32,8 +34,12 @@ function Feed() {
         setShowSortedOptions(false);
     }
 
-    const {data: posts} = useQuery('channels', () => api.get('/posts')
-        .then((resp => resp.data)))
+    async function fetchPosts(page: number) {
+        const response = await api.get(`/posts?_start=${page}&_limit=15`)
+        return response.data
+    }
+
+    const {data: posts} = useQuery(['channels', page], () =>  fetchPosts(page), { keepPreviousData: true})
         
     const mutation = useMutation((post: Post) => api.post('/posts', post), {
         onSuccess: () => {
@@ -90,7 +96,16 @@ function Feed() {
                     </span>
                 </footer>
             </FeedDescriptor>
+            
             {posts?.map((post: Post) => <FeedItem data={post} key={post.id} />)}
+
+            {posts && (
+                <SeeMoreFooter>
+                   <Button 
+                    onClick={() => setPage(page => page + 5)}
+                    colorScheme="outlined-secondary">Ver mais</Button>
+              </SeeMoreFooter>
+            )}
         </Wrapper>
     )
 }
