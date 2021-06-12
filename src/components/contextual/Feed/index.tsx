@@ -29,7 +29,7 @@ function Feed() {
         setShowSortedOptions(false);
     }
 
-    const {data: posts} = useQuery('channels', () => api.get('/posts?_sort=time&order=asc')
+    const {data: posts} = useQuery('channels', () => api.get('/posts')
         .then((resp => resp.data)))
     const mutation = useMutation((post: Post) => api.post('/posts', post), {
         onSuccess: () => {

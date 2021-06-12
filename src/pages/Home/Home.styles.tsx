@@ -10,7 +10,9 @@ export const Container = styled.div`
 export const FeedContainer = styled.main`
     @media(min-width: 1200px) {
         display: grid;
-        padding: 32px;
-        grid-template-columns: minmax(auto, 800px) 1fr;
+        padding: 32px 0;
+        grid-gap: 32px;
+        justify-content: center;
+        grid-template-columns: minmax(auto, 800px) 280px;
     }
 `
