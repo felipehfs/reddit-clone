@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.header`
     background-color: ${props => props.theme.navbarBackground};
-    padding: 8px 12px;
+    padding: 8px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;

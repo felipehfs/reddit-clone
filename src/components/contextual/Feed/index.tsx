@@ -14,12 +14,15 @@ import { Post } from '../../../models/Post';
 import { useMutation, useQuery, useQueryClient } from 'react-query';
 import api from '../../../services/api';
 import Button from '../../shared/Button';
+import { useAtom } from 'jotai';
+import { SessionAtom } from '../../../atoms/SessionAtom';
 
 type PostSortingOptions = 'Hot' | 'Latest';
 
 function Feed() {
     const [sortedBy, setSortedBy] = useState<PostSortingOptions>('Hot')
     const [post, setPost] = useState('')
+    const [session] = useAtom(SessionAtom)
     const [showSortedOptions, setShowSortedOptions] = useState(false)
 
     const queryClient = useQueryClient()
@@ -46,8 +49,8 @@ function Feed() {
 
         mutation.mutate({
             id,
-            avatarUrl: 'https://ui-avatars.com/api/?name=felipe+henrique',
-            channel: 'even-keeled',
+            avatarUrl: session.avatarUrl,
+            channel: session.username,
             rating: 0,
             time: new Date().toLocaleDateString(),
             title: post,

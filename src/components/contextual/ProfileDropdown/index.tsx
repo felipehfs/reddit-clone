@@ -3,15 +3,18 @@ import {
     Profile,
 } from './ProfileDropdown.styles'
 import { Avatar } from '../../shared/Avatar';
+import { useAtom } from 'jotai';
+import { SessionAtom } from '../../../atoms/SessionAtom';
 
 export default function ProfileDropdown() {
+    const [session] = useAtom(SessionAtom)
 
     return (
         <Profile>
-        <Avatar size={32} src="https://ui-avatars.com/api/?name=felipe+henrique" alt="Felipe Henrique" />
+        <Avatar size={32} src={session.avatarUrl} alt={session.username} />
         <section>
-            <p>Felipe Henrique</p>
-            <small>Felipehfs</small>
+            <p>{session.name}</p>
+            <small>{session.username}</small>
         </section>
     </Profile>
     )
