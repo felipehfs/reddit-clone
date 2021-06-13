@@ -1,13 +1,12 @@
 import React from "react"
-import { Container, GridContainer } from "./FormLayout.styles"
-import Header from "../../../contextual/Header"
+import BlankContent from "../BlankContent"
+import {  GridContainer } from "./FormLayout.styles"
 
 const ForumLayout: React.FC = (props) => {
   return (
-    <Container>
-      <Header />
+    <BlankContent>
       <GridContainer>{props.children}</GridContainer>
-    </Container>
+    </BlankContent>
   )
 }
 
