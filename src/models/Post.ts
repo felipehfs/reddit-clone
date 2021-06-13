@@ -6,4 +6,5 @@ export interface Post {
     time: string;
     totalComments: number;
     rating: number;
+    comments?: Post[]
 }

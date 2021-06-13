@@ -62,6 +62,7 @@ function Feed() {
             time: new Date().toLocaleDateString(),
             title: post,
             totalComments: 0,
+            comments: [],
         });
 
     }

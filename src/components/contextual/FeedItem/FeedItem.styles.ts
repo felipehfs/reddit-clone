@@ -32,9 +32,9 @@ export const FeedHeaderLeft = styled.div`
 
 export const FeedContent = styled.main`
     padding: 16px 0;
-
+    cursor: pointer;
     p {
-      font-size: 16px;
+        font-size: 16px;
         color: ${props => props.theme.fontColor};
     }
 `;

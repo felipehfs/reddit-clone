@@ -9,6 +9,7 @@ import { FeedWrapper, FeedHeader, FeedHeaderLeft, FeedContent, FeedFooter, Ratin
 import { Post } from '../../../models/Post'
 import { useMutation, useQueryClient } from 'react-query'
 import api from '../../../services/api'
+import { useHistory } from 'react-router-dom'
 
 interface FeedItemProps {
    data: Post;
@@ -17,6 +18,7 @@ interface FeedItemProps {
 
 export default function FeedItem(props: FeedItemProps) {
     const queryClient = useQueryClient();
+    const history = useHistory();
 
     const mutation = useMutation((post: Post) => api.put(`/posts/${post.id}`, post), {
         onSuccess: () => {
@@ -51,7 +53,7 @@ export default function FeedItem(props: FeedItemProps) {
                     </time>
                 </FeedHeaderLeft>
             </FeedHeader>
-            <FeedContent>
+            <FeedContent onClick={() => history.push(`/posts/${props.data.id}`)}>
                 <p>{props.data.title}</p>
             </FeedContent>
             <FeedFooter>

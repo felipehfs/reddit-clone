@@ -6,12 +6,15 @@ import { FaBars, FaSearch } from 'react-icons/fa'
 import TextInput from '../../shared/TextInput';
 import { useState } from 'react';
 import ProfileDropdown from '../ProfileDropdown';
+import { useHistory } from 'react-router-dom';
 
 const Header: FC = props => {
     const [search, setSearch] = useState('');
+    const history = useHistory();
+
     return (
         <Wrapper>
-            <LogoImage src={Logo} alt="Reddit" />
+            <LogoImage src={Logo} alt="Reddit" onClick={() => history.push('/')} />
             <SearchContainer className="hide-in-mobile">
                 <form>
                     <TextInput

@@ -25,11 +25,33 @@
       "time": "16/12/2020",
       "channel": "knowledge base",
       "title": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit.",
-      "totalComments": 51
+      "totalComments": 55,
+      "comments": [
+        {
+          "id": "5134b448-59da-465b-8784-c0c54eb75497",
+          "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
+          "channel": "Felipe Henrique",
+          "rating": 0,
+          "time": "13/06/2021",
+          "title": "Muito Legal Fera!!",
+          "totalComments": 0,
+          "comments": []
+        },
+        {
+          "id": "12d1e3d8-db0d-4991-9a22-834a89b3a0a1",
+          "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
+          "channel": "Felipe Henrique",
+          "rating": 0,
+          "time": "13/06/2021",
+          "title": "Admiro muito o seu Trabalho...",
+          "totalComments": 0,
+          "comments": []
+        }
+      ]
     },
     {
       "id": 4,
-      "rating": 3,
+      "rating": 5,
       "avatarUrl": "https://robohash.org/ipsamdoloribusid.png?size=50x50&set=set1",
       "time": "17/12/2020",
       "channel": "Expanded",
@@ -94,7 +116,7 @@
       "id": "9308979",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "even-keeled",
-      "rating": 0,
+      "rating": 4,
       "time": "6/12/2021",
       "title": "Felipfe",
       "totalComments": 0
@@ -184,7 +206,7 @@
       "id": "6074563",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "even-keeled",
-      "rating": 0,
+      "rating": 2,
       "time": "6/12/2021",
       "title": "Hello World",
       "totalComments": 0
@@ -220,7 +242,7 @@
       "id": "1833570",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "even-keeled",
-      "rating": 0,
+      "rating": 4,
       "time": "6/12/2021",
       "title": "Felipe Henrique Ferreira Sousa",
       "totalComments": 0
@@ -229,7 +251,7 @@
       "id": "621191",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "felipehfs",
-      "rating": 0,
+      "rating": 2,
       "time": "6/12/2021",
       "title": "Hello World",
       "totalComments": 0
@@ -347,7 +369,7 @@
       "channel": "Jillie",
       "time": "06/05/2021",
       "avatarUrl": "https://robohash.org/suntautdistinctio.png?size=50x50&set=set1",
-      "rating": 12,
+      "rating": 14,
       "totalComments": 8,
       "title": "Up-sized"
     },
