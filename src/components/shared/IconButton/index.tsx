@@ -1,14 +1,10 @@
-import { ReactNode } from "react";
-import { Button} from "./IconButton.styles"
+import { ReactNode } from "react"
+import { Button } from "./IconButton.styles"
 
 interface IconButtonProps {
-    icon: ReactNode;
+  icon: ReactNode
 }
 
 export default function IconButton(props: IconButtonProps) {
-    return (
-        <Button>
-            {props.icon}
-        </Button>
-    )
+  return <Button>{props.icon}</Button>
 }

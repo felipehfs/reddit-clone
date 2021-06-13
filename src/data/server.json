@@ -99,7 +99,7 @@
       "channel": "Farand",
       "time": "05/31/2021",
       "avatarUrl": "https://robohash.org/molestiasipsumesse.png?size=50x50&set=set1",
-      "rating": 16,
+      "rating": 18,
       "totalComments": 20,
       "title": "User-friendly"
     },
@@ -119,7 +119,19 @@
       "rating": 4,
       "time": "6/12/2021",
       "title": "Felipfe",
-      "totalComments": 0
+      "totalComments": 1,
+      "comments": [
+        {
+          "id": "49a9e42b-65f0-4a45-998a-ac913b47102f",
+          "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
+          "channel": "Felipe Henrique",
+          "rating": 0,
+          "time": "6/13/2021",
+          "title": "Hello world",
+          "totalComments": 0,
+          "comments": []
+        }
+      ]
     },
     {
       "id": "767820",

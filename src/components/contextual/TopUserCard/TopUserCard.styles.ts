@@ -1,7 +1,6 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const UserItem = styled.p`
-    padding: 12px 16px;
+  padding: 12px 16px;
 `
-export const Container = styled.aside`
-`;
+export const Container = styled.aside``

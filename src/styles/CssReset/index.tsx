@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 const CssReset = createGlobalStyle`
     * {
@@ -13,4 +13,4 @@ const CssReset = createGlobalStyle`
     }
 `
 
-export default CssReset;
+export default CssReset

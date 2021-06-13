@@ -1,4 +1,4 @@
 export const LocalStorageKeys = {
-    avatarUrl: 'user.avatar',
-    username: 'user.username'
+  avatarUrl: "user.avatar",
+  username: "user.username",
 }
