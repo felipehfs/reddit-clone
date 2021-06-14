@@ -8,7 +8,7 @@ import {
   Comments,
   CommentItem,
   CommentContent,
-} from "./PostItem.styles"
+} from "./PostContainer.styles"
 import { useMutation, useQuery, useQueryClient } from "react-query"
 import api from "../../../services/api"
 import { useParams } from "react-router-dom"
@@ -18,7 +18,7 @@ import { Post } from "../../../models/Post"
 import { useAtom } from "jotai"
 import { SessionAtom } from "../../../atoms/SessionAtom"
 
-export default function PostItem() {
+export default function PostContainer() {
   const queryClient = useQueryClient()
   const params = useParams<{ id: string }>()
   const [comment, setComment] = useState("")
