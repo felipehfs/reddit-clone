@@ -68,9 +68,9 @@ export default function FeedItem(props: FeedItemProps) {
             <FaArrowDown size={12} />
           </RatingButton>
         </RatingContainer>
-        <DefaultButton>
+        <DefaultButton onClick={() => history.push(`/posts/${props.data.id}`)}>
           <FaComment />
-          <span style={{ padding: "0 8px" }}>{props.data.totalComments}</span>
+          <span style={{ padding: "0 8px" }}>{props.data.comments?.length ?? 0}</span>
         </DefaultButton>
       </FeedFooter>
     </FeedWrapper>
