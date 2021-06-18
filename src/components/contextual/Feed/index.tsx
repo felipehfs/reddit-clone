@@ -100,7 +100,7 @@ function Feed() {
       ))}
 
       {posts && (
-        <SeeMoreFooter>
+        <SeeMoreFooter data-testid="seeMore">
           <Button
             onClick={() => setPage((page) => page + 5)}
             colorScheme="outlined-secondary"
