@@ -16,7 +16,7 @@ const data = [
     },
 ]
 
-const worker = setupServer(
+const server = setupServer(
     rest.get('http://localhost:5000/posts', (req, res, ctx) => {
         return res(ctx.json(data))
     }),
@@ -26,14 +26,14 @@ const worker = setupServer(
 describe('Feed component', () => { 
 
     beforeAll(() => {
-        worker.listen();
+        server.listen();
     })
 
     afterEach(() => {
-        worker.resetHandlers()
+        server.resetHandlers()
     })
 
-    afterAll(() => worker.close())
+    afterAll(() => server.close())
 
 
     test('should render a feed', async () => {
@@ -63,7 +63,16 @@ describe('Feed component', () => {
     })
 
     test('should be call the next Page', async () => {
-          render(
+        server.use(
+            rest.post('/posts', (req, res, ctx) => {
+                return res(
+                    ctx.status(201),
+                    ctx.json({...data })
+                )
+            })
+        )
+        
+        render(
             <WrapperReactQuery>
                 <Feed />
             </WrapperReactQuery>
