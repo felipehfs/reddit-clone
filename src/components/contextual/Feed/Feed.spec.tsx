@@ -81,5 +81,6 @@ describe('Feed component', () => {
         const seeMore = await screen.findByTestId("seeMore");
         fireEvent.click(seeMore)
         
+        expect(screen.getByText(data[0].title)).toBeInTheDocument()
     })
 })
