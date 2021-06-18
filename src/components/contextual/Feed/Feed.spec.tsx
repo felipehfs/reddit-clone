@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import Feed from '.';
 import WrapperReactQuery from '../../shared/WrapperReactQuery';
 import { setupServer } from 'msw/node'
@@ -45,6 +45,32 @@ describe('Feed component', () => {
         );
 
         await waitFor(() => expect(screen.getByTestId('seeMore')).toBeVisible())
+        
+    });
+
+    test('should submit a new post', async () => {
+        render(
+            <WrapperReactQuery>
+                <Feed />
+            </WrapperReactQuery>
+        );
+        
+        const textArea = screen.getByTestId('feedForm.textarea');
+        const button = screen.getByTestId('feedForm.button');
+
+        fireEvent.change(textArea, { value: 'teste' });
+        fireEvent.click(button);
+    })
+
+    test('should be call the next Page', async () => {
+          render(
+            <WrapperReactQuery>
+                <Feed />
+            </WrapperReactQuery>
+        );
+
+        const seeMore = await screen.findByTestId("seeMore");
+        fireEvent.click(seeMore)
         
     })
 })

@@ -64,11 +64,14 @@ function Feed() {
       <FeedForm>
         <form onSubmit={handleOnCreatePost}>
           <textarea
+            data-testid="feedForm.textarea"
             onChange={(event) => setPost(event.target.value)}
             value={post}
           />
           <footer>
-            <Button colorScheme="secondary" disabled={mutation.isLoading}>
+            <Button 
+              data-testid="feedForm.button"
+              colorScheme="secondary" disabled={mutation.isLoading}>
               Enviar
             </Button>
           </footer>
@@ -100,8 +103,9 @@ function Feed() {
       ))}
 
       {posts && (
-        <SeeMoreFooter data-testid="seeMore">
+        <SeeMoreFooter>
           <Button
+            data-testid="seeMore"
             onClick={() => setPage((page) => page + 5)}
             colorScheme="outlined-secondary"
           >
