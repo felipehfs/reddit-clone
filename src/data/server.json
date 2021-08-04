@@ -2,21 +2,33 @@
   "posts": [
     {
       "id": 1,
-      "rating": 33,
+      "rating": 37,
       "avatarUrl": "https://robohash.org/utcupiditateodit.png?size=50x50&set=set1",
       "time": "29/05/2021",
       "channel": "even-keeled",
       "title": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis.",
-      "totalComments": 18
+      "totalComments": 19,
+      "comments": [
+        {
+          "id": "a9f94e23-7b7c-48d3-8a54-82509ccd693b",
+          "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
+          "channel": "Felipe Henrique",
+          "rating": 0,
+          "time": "6/19/2021",
+          "title": "Hello World",
+          "totalComments": 0,
+          "comments": []
+        }
+      ]
     },
     {
       "id": 2,
-      "rating": 6,
+      "rating": 8,
       "avatarUrl": "https://robohash.org/inventorerationesit.png?size=50x50&set=set1",
       "time": "09/06/2021",
       "channel": "Decentralized",
       "title": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat.",
-      "totalComments": 72,
+      "totalComments": 73,
       "comments": [
         {
           "id": "b05deb1e-aff4-4f3d-8414-905344c30daf",
@@ -25,6 +37,16 @@
           "rating": 0,
           "time": "6/13/2021",
           "title": "First",
+          "totalComments": 0,
+          "comments": []
+        },
+        {
+          "id": "10f83613-ed81-4f19-ab99-28d8f05bfe87",
+          "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
+          "channel": "Felipe Henrique",
+          "rating": 0,
+          "time": "6/19/2021",
+          "title": "Second",
           "totalComments": 0,
           "comments": []
         }
@@ -131,7 +153,7 @@
       "rating": 4,
       "time": "6/12/2021",
       "title": "Felipfe",
-      "totalComments": 2,
+      "totalComments": 3,
       "comments": [
         {
           "id": "49a9e42b-65f0-4a45-998a-ac913b47102f",
@@ -152,6 +174,16 @@
           "title": "Second",
           "totalComments": 0,
           "comments": []
+        },
+        {
+          "id": "974236b4-b089-42d4-8b2e-c1d4a3df4d58",
+          "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
+          "channel": "Felipe Henrique",
+          "rating": 0,
+          "time": "6/27/2021",
+          "title": "Third",
+          "totalComments": 0,
+          "comments": []
         }
       ]
     },
@@ -159,7 +191,7 @@
       "id": "767820",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "even-keeled",
-      "rating": 0,
+      "rating": 1,
       "time": "6/12/2021",
       "title": "fefe",
       "totalComments": 0
@@ -168,7 +200,7 @@
       "id": "4614486",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "even-keeled",
-      "rating": 0,
+      "rating": 2,
       "time": "6/12/2021",
       "title": "fefe\n",
       "totalComments": 0
@@ -270,7 +302,7 @@
       "id": "604420",
       "avatarUrl": "https://ui-avatars.com/api/?name=felipe+henrique",
       "channel": "even-keeled",
-      "rating": 5,
+      "rating": 6,
       "time": "6/12/2021",
       "title": "",
       "totalComments": 0

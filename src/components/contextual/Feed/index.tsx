@@ -8,6 +8,7 @@ import api from "../../../services/api"
 import Button from "../../shared/Button"
 import { useAtom } from "jotai"
 import { SessionAtom } from "../../../atoms/SessionAtom"
+import Spinner from "../../shared/Spinner"
 
 type PostSortingOptions = "Hot" | "Latest"
 
@@ -30,7 +31,7 @@ function Feed() {
     return response.data
   }
 
-  const { data: posts } = useQuery(["channels", page], () => fetchPosts(page), {
+  const { data: posts, isLoading } = useQuery(["channels", page], () => fetchPosts(page), {
     keepPreviousData: true,
   })
 
@@ -97,6 +98,9 @@ function Feed() {
           </span>
         </footer>
       </FeedDescriptor>
+      {
+        isLoading && <Spinner />
+      }
 
       {posts?.map((post: Post) => (
         <FeedItem data={post} key={post.id} />
